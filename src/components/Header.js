@@ -29,13 +29,20 @@ function Header() {
               ))}
         </Menu>
         <RightMenu>
+          
+        <a href ="#"> Shop</a>
+        <a href ="#"> Shop</a>
+        <a href ="#"> Shop</a>
+        <a href ="#"> Shop</a>
+          <a href ="#"> Shop</a>
+          <a href ="#"> Shop</a>
           <a href ="#"> Shop</a>
           <a href ="#"> Tesla Account</a>
           <CustomMenu onClick={()=>setBurgerState(true)} />
         </RightMenu>
         <BurgerNav show={burgerState}>
           <CloseWrapper>
-              <CustomClose onClick = {() => setBurgerState(false)}/>
+              <CustomCloses onClick = {() => setBurgerState(false)}/>
           </CloseWrapper>
                 {cars && cars.map((car, index)=> (
                 <li><a href ="#">{car}</a></li>

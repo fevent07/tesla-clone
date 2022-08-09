@@ -22,6 +22,7 @@ function Header() {
           <img src="/images/logo.svg" alt=" logo"/>
         </a>
         <Menu>
+          <></>
               {cars && cars.map((car, index)=>(
                 <p><a href ="#">{car}</a></p>
 

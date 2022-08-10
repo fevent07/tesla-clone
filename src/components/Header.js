@@ -3,46 +3,63 @@ import styled from "styled-components"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { selectCars } from '../features/car/carSlice';
+import { selectCarsUrl } from '../features/car/carSlice';
 import { useSelector } from 'react-redux';
-import { Routes, Route, useNavigate} from "react-router-dom";
-import Models from "./other/Models"
+// import {Routes, Route, useNavigate} from "react-router-dom";
+
+import {Routes, Route } from "react-router-dom";
+
+import Models from "./other/Models";
+// import Models from './other/Models'
 
 function Header() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [burgerState, setBurgerState] = useState(false);
     const cars = useSelector(selectCars);
+    const carsUrl= useSelector(selectCarsUrl);
       // console.log(cars);
     // const navigateModels = () => {
     //   navigate('/Models');
-    // };
+    // }
 
   return (
     <Container>
-        <a>
+       {/* <Routes> 
+      <Route path= '/one' element={<One/>}/>
+      <Route path="/" element ={<Models/>}/>
+      <Route path="/Models" element={<Models />} />
+    </Routes> */}
+    {/* <Routes>
+        <Route path ="/Models">
+           <Models />
+          </Route>
+        
+        </Routes> */}
+        <a href ="/">
           <img src="/images/logo.svg" alt=" logo"/>
         </a>
+       {/* <li onClick={navigateModels}>
+       <a> Shop </a>
+       </li> */}
         <Menu>
           <></>
-              {cars && cars.map((car, index)=>(
-                <p><a href ="#">{car}</a></p>
+              {cars && cars.map((car, carUrl, index)=>(
+                <p><a href ={carUrl}>{car}</a></p>
 
               ))}
         </Menu>
+
         <RightMenu>
-          
         <a href ="#"> Shop</a>
         <a href ="#"> Shop</a>
         <a href ="#"> Shop</a>
-        <a href ="#"> Shop</a>
-          <a href ="#"> Shop</a>
-          <a href ="#"> Shop</a>
-          <a href ="#"> Shop</a>
+       
           <a href ="#"> Tesla Account</a>
           <CustomMenu onClick={()=>setBurgerState(true)} />
         </RightMenu>
         <BurgerNav show={burgerState}>
           <CloseWrapper>
-              <CustomCloses onClick = {() => setBurgerState(false)}/>
+              <CustomClose onClick = {() => setBurgerState(false)}/>
           </CloseWrapper>
                 {cars && cars.map((car, index)=> (
                 <li><a href ="#">{car}</a></li>

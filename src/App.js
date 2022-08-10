@@ -3,17 +3,32 @@ import React from 'react';
 // import { Counter } from './features/counter/Counter';
 // import Models from "./components/other/Models";
 import './App.css';
-import Home from "./components/Home";
-import Header  from "./components/Header"
+import HomeOne from "./components/HomeOne";
+import Header  from "./components/Header";
+import {Routes, Route, useNavigation} from "react-router-dom";
+import styled from "styled-components";
+import Models from "./components/other/Models";
+import { display } from '@mui/system';
+
 function App() {
   return (
-    <div className="App">
+    <Container>
+      <Routes>
+        <Route exact path="/" element={<HomeOne/>}/>
+        <Route exact path="/Models" element={<Models/>}/>
+    
       {/* <Counter /> */}
       {/* <Models /> */}
-      <Header />
-      <Home />
-    </div>
+      {/* <Header /> */}
+      {/* <Home /> */}
+      </Routes>
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+ display: flex;
+ align-items: center;
+`

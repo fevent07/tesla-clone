@@ -9,6 +9,9 @@ import {Routes, Route, useNavigation} from "react-router-dom";
 import styled from "styled-components";
 import Models from "./components/other/Models";
 import { display } from '@mui/system';
+import Box from "./box/index.js";
+// import Table from "./table/table.html";
+// var Table =require("./table/table.html");
 
 function App() {
   return (
@@ -16,7 +19,9 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomeOne/>}/>
         <Route exact path="/Models" element={<Models/>}/>
-    
+        <Route exact path="/Box" element={<Box/>}/>
+        {/* <Route exact path="/table" element={<Table/>}/> */}
+        {/* <iframe src={Table }></iframe>   /* like this */ }
       {/* <Counter /> */}
       {/* <Models /> */}
       {/* <Header /> */}

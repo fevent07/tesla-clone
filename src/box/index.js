@@ -1,10 +1,11 @@
 import React from 'react';
 // import styled from "styled-components";
-import './style.css';
+import './styleBox.css';
 
 
 function index() {
   return (
+    <div class="bodycube">
     <div class="cube">
         <div>
             <p>hey</p>
@@ -12,13 +13,14 @@ function index() {
         {/* <span style="--i:0;"> </span>
         <span style="--i:1;"> </span>
         <span style="--i:2;"> </span>
-        <span style="--i:3;"> </span> */}
-        <span style={("--i:0;")}></span>
+      <span style="--i:3;"> </span> */}
+        {/* <span style={("--i:0;")}></span>
         <span style={("--i:1;")}></span>
         <span style={("--i:2;")}></span>
-        <span style={("--i:3;")}></span>
+      <span style={("--i:3;")}></span> */}
         </div>
     </div>
+      </div>
     // <Container>
       
     //   <Header />

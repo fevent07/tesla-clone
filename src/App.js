@@ -10,6 +10,10 @@ import styled from "styled-components";
 import Models from "./components/other/Models";
 import { display } from '@mui/system';
 import Box from "./box/index.js";
+import Wave from "./wave/wave";
+import Home from "./wave/home";
+// import WaveTwo from "./wave/waveTwo";
+
 // import Table from "./table/table.html";
 // var Table =require("./table/table.html");
 
@@ -20,6 +24,9 @@ function App() {
         <Route exact path="/" element={<HomeOne/>}/>
         <Route exact path="/Models" element={<Models/>}/>
         <Route exact path="/Box" element={<Box/>}/>
+        <Route exact path="/Home" element={<Home/>}/>
+        {/* <Route exact path="/WaveTwo" element={<WaveTwo/>}/> */}
+
         {/* <Route exact path="/table" element={<Table/>}/> */}
         {/* <iframe src={Table }></iframe>   /* like this */ }
       {/* <Counter /> */}
